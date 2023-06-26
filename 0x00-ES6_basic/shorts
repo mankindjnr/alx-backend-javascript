@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+alias rmv="rm *~"
+alias npm="npm run dev"
