@@ -2,7 +2,7 @@ export default function getListStudents() {
   const one = {
     id: 1,
     firstName: 'Guillaume',
-    location: 'San Fransisco',
+    location: 'San Francisco',
   };
   const two = {
     id: 2,
@@ -12,7 +12,7 @@ export default function getListStudents() {
   const three = {
     id: 5,
     firstName: 'Serena',
-    location: 'San Fransisco',
+    location: 'San Francisco',
   };
 
   return [one, two, three];
