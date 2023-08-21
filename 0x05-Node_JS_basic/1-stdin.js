@@ -1,14 +1,14 @@
-process.stdin.setEncoding("utf-8");
+process.stdin.setEncoding('utf-8');
 
-console.log("Welcome to Holberton School, what is your name?");
+console.log('Welcome to Holberton School, what is your name?');
 
-process.stdin.on("data", function(input){
-    input = input.trim()
-    console.log(`Your name is: ${input}`);
+process.stdin.on('data', (input) => {
+  const userInput = input.trim();
+  console.log(`Your name is: ${userInput}`);
 });
 
-process.stdin.on("end", function() {
-    console.log("This important software is now closing");
+process.stdin.on('end', () => {
+  console.log('This important software is now closing');
 });
 
 process.stdin.resume();
