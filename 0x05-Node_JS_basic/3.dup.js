@@ -37,13 +37,14 @@ async function countStudents(path) {
           currentField.push(values[0].trim());
         }
       }
-
-      result += `Number of students in ${field}: ${currentField.length}. List: ${currentField.join(', ')}`;
       if (!field === fields[fields.length - 1]) {
-        console.log("\n")
+        result += `Number of students in ${field}: ${currentField.length}. List: ${currentField.join(', ')}`;
       }
-      return result
+      else {
+        result += `Number of students in ${field}: ${currentField.length}. List: ${currentField.join(', ')}\n`;
+      }
     }
+    return result
   } catch (err) {
     throw new Error('Cannot load the database');
   }
