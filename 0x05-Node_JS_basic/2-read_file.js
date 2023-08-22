@@ -10,16 +10,9 @@ function countStudents(path) {
     }
 
     const students = [];
-    const fieldCounts = {};
 
     for (const line of lines.slice(1)) {
-      const [firstname, lastname, age, field] = line.split(',');
-
-      if (fieldCounts[field] === undefined) {
-        fieldCounts[field] = 1;
-      } else {
-        fieldCounts[field]++;
-      }
+      const firstname = line.split(',')[0];
 
       students.push(firstname);
     }
