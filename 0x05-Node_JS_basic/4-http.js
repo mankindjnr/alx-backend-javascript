@@ -1,11 +1,12 @@
-const express = require("express");
-const app = express();
-const port = 1245;
+const http = require("http")
 
-app.get("/", (req, res) => {
-    res.send("Hello Holberton School1");
+const server = http.createServer((req, res) => {
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+
+    res.end("Hello, World!\n")
 });
 
-app.listen(port, () => {
-    console.log("Hello Holberton School!")
-});
+const port = 3000
+
+server.listen(port, () => {
+})
