@@ -1,9 +1,9 @@
-const fs = require("fs").promises;
+const fs = require('fs').promises;
 
-async function countStudents(path){
-    try {
-        const data = await fs.readFile(path,'utf-8');
-        const lines = data.split('\n').filter((line) => line.trim() !== ''); // Remove empty lines
+async function countStudents(path) {
+  try {
+    const data = await fs.readFile(path, 'utf-8');
+    const lines = data.split('\n').filter((line) => line.trim() !== ''); // Remove empty lines
 
     if (lines.length === 0) {
       throw new Error('Database is empty');
@@ -40,8 +40,8 @@ async function countStudents(path){
 
       console.log(`Number of students in ${field}: ${currentField.length}. List: ${currentField.join(', ')}`);
     }
-    } catch (err) {
-        throw new Error("Cannot load the database")
-    }
+  } catch (err) {
+    throw new Error('Cannot load the database');
+  }
 }
-module.exports = countStudents
+module.exports = countStudents;
