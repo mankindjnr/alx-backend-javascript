@@ -9,6 +9,7 @@ const app = http.createServer((req, res) => {
 const port = 1245;
 
 app.listen(port, () => {
+  console.log('...');
 });
 
 module.exports = app;
