@@ -8,7 +8,16 @@ const app = http.createServer((req, res) => {
         res.end("Hello Holberton School!");
     } else if (req.url === "/students") {
         res.end("This is the list of our students");
-        res.end(fileRead("database.csv"));
+        async function main() {
+            try {
+              const result = await fileRead('database.csv');
+              console.log(result);
+            } catch (err) {
+              console.error(err.message);
+            }
+          }
+          
+          main();;
     }
 });
 
