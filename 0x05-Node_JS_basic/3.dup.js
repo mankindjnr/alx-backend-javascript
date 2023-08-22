@@ -17,7 +17,7 @@ async function countStudents(path) {
       students.push(firstname);
     }
 
-    let result = `Number of students: ${students.length}\n`;
+    let result = `Number of students: ${students.length}`;
 
     const fields = [];
 
@@ -37,14 +37,9 @@ async function countStudents(path) {
           currentField.push(values[0].trim());
         }
       }
-      if (!field === fields[fields.length - 1]) {
-        result += `Number of students in ${field}: ${currentField.length}. List: ${currentField.join(', ')}`;
-      }
-      else {
-        result += `Number of students in ${field}: ${currentField.length}. List: ${currentField.join(', ')}\n`;
-      }
+      result += `\nNumber of students in ${field}: ${currentField.length}. List: ${currentField.join(', ')}`;
     }
-    return result
+    return result;
   } catch (err) {
     throw new Error('Cannot load the database');
   }
