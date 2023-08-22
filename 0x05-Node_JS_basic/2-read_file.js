@@ -26,30 +26,28 @@ function countStudents(path) {
 
     console.log(`Number of students: ${students.length}`);
 
-    const cslines = []
-    const swelines = []
-    const fields = []
+    const fields = [];
 
     for (const line of lines.slice(1)){
-        const values = line.split(',')
-        const major = values[3].trim()
+        const values = line.split(',');
+        const major = values[3].trim();
         if (!fields.includes(major))
-        fields.push(major)
+        fields.push(major);
 
     }
 
     for (const field of fields){
-      const current_field = []
+      const current_field = [];
       for (const line of lines.slice(1)){
-        const values = line.split(',')
-        const major = values[3].trim()
+        const values = line.split(',');
+        const major = values[3].trim();
 
         if (major === field){
-          current_field.push(values[0].trim())
+          current_field.push(values[0].trim());
         }
       }
 
-      console.log(`Number of students in ${field}: ${current_field.length}. List: ${current_field.join(", ")}`)
+      console.log(`Number of students in ${field}: ${current_field.length}. List: ${current_field.join(", ")}`);
     }
 
   } catch (error) {
