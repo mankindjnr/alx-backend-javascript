@@ -1,12 +1,12 @@
-const http = require("http")
+const http = require('http');
 
 const server = http.createServer((req, res) => {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
 
-    res.end("Hello, World!\n")
+  res.end('Hello, Holberton School!');
 });
 
-const port = 3000
+const port = 1245;
 
 server.listen(port, () => {
-})
+});
